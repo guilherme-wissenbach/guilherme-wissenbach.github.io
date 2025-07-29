@@ -91,7 +91,7 @@ header video {
   /* start hidden */
   left: 0;
   right: 0;
-  background-color: rgba(28, 28, 56, 0.95);
+  background-color: #484d6ad4;
   padding: 0.8rem 1rem;
   display: flex;
   justify-content: center;
@@ -390,6 +390,14 @@ header video {
 }
 
 @media screen and (max-width: 768px) {
+  .logo-img {
+    width: 300px;
+  }
+  .logo-container p {
+    font-size: 1.25rem;
+    width: 80%;
+    margin: 1rem auto;
+}
   .stats {
     flex-direction: column;
     gap: 1.5rem;
