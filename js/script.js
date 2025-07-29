@@ -53,6 +53,7 @@ $('a[href^="#"]').on('click', function (e) {
   }
 });
 
+
 $(".nav-menu").on("click", function () {
   $(".nav-container").fadeToggle().css('display', 'flex');
 })
