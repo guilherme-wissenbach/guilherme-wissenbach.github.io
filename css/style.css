@@ -339,7 +339,6 @@ header video {
   }
 }
 
-/* Mobile: show only on active swiper card */
 @media (hover: none) and (pointer: coarse) {
   .swiper-slide-active .hover-text {
     opacity: 1;
