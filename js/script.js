@@ -41,7 +41,10 @@ $('a[href^="#"]').on('click', function (e) {
   e.preventDefault();
   const target = $(this.getAttribute('href'));
   if (target.length) {
-    if (isMobileUserAgent()) {
+    if (isMobileUserAgent() && !$(this).hasClass("nav-logo")) {
+      $(".nav-container").fadeToggle().css('display', 'flex');
+    }
+    if (isMobileUserAgent() && $(this).hasClass("nav-logo") && $(".nav-container").is(":visible")) {
       $(".nav-container").fadeToggle().css('display', 'flex');
     }
     $('html, body').animate({

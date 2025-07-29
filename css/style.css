@@ -505,5 +505,6 @@ header video {
     font-size: 25px;
     z-index: 99999;
     margin: auto 0;
+    display: block;
   }
 }
