@@ -106,6 +106,7 @@ header video {
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s ease;
+  padding: 0.5rem 1rem;
 }
 
 #main-nav a:hover {
@@ -114,7 +115,23 @@ header video {
 }
 
 #main-nav img {
-  height: 20px;
+  height: 25px;
+}
+
+#main-nav .zap{
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 0.2rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.nav-menu{
+  display: none;
 }
 
 .section {
@@ -218,6 +235,8 @@ header video {
   margin: 0 auto;
   position: relative;
   width: 70%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .recent-projects h1 {
@@ -235,9 +254,9 @@ header video {
   margin-bottom: 0.5rem;
   text-align: left;
   max-height: fit-content;
-  position: absolute;
+  /* position: absolute;
   top: 10px;
-  left: 0;
+  left: 0; */
 }
 
 .recent-projects .container a {
@@ -377,6 +396,9 @@ header video {
   padding-right: 5px;
 }
 
+.contact-info a {
+  color: var(--text-light);
+}
 .footer {
   text-align: center;
   padding: 20px;
@@ -402,6 +424,11 @@ header video {
     font-size: 1.25rem;
     width: 80%;
     margin: 1rem auto;
+  }
+  
+
+  .container {
+    display: block;
   }
 
   .stats {
@@ -452,5 +479,31 @@ header video {
 
   .swiper-button-next {
     right: 5px;
+  }
+  #main-nav{
+    justify-content: space-between;
+  }
+
+  .nav-container{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #484d6ad4;
+  }
+  .nav-logo{
+    z-index: 99999;
+  }
+  
+  .nav-menu{
+    color: var(--text-light);
+    font-size: 25px;
+    z-index: 99999;
+    margin: auto 0;
   }
 }

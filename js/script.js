@@ -37,15 +37,28 @@ const swiper = new Swiper('.swiper-container', {
 swiper.slideTo(2, 0)
 
 
-$('a[href^="#"]').on('click', function(e) {
-    e.preventDefault();
-    const target = $(this.getAttribute('href'));
-    if (target.length) {
-        $('html, body').animate({
-            scrollTop: target.offset().top-200
-        }, 800);
+$('a[href^="#"]').on('click', function (e) {
+  e.preventDefault();
+  const target = $(this.getAttribute('href'));
+  if (target.length) {
+    if (isMobileUserAgent()) {
+      $(".nav-container").fadeToggle().css('display', 'flex');
     }
+    $('html, body').animate({
+      scrollTop: target.offset().top - 200
+    }, 800);
+  }
 });
+
+$(".nav-menu").on("click", function () {
+  $(".nav-container").fadeToggle().css('display', 'flex');
+})
+
+function isMobileUserAgent() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+}
+
 
 let lastScrollTop = 0;
 const nav = $('#main-nav');
