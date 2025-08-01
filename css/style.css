@@ -487,6 +487,15 @@ header video {
     justify-content: space-between;
   }
 
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .nav-container{
     display: none;
     width: 100vw;

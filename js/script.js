@@ -41,7 +41,7 @@ $('a[href^="#"]').on('click', function (e) {
   e.preventDefault();
   const target = $(this.getAttribute('href'));
   if (target.length) {
-    if (isMobileUserAgent() && !$(this).hasClass("nav-logo")) {
+    if (isMobileUserAgent() && !$(this).hasClass("nav-logo") && !$(this).hasClass("nav-base")) {
       $(".nav-container").fadeToggle().css('display', 'flex');
     }
     if (isMobileUserAgent() && $(this).hasClass("nav-logo") && $(".nav-container").is(":visible")) {
