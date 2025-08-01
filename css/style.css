@@ -467,10 +467,13 @@ header video {
     width: 100%;
   }
 
-  .grid img,
-  .swiper-slide img {
+  .grid img {
     width: 250px;
     height: 250px;
+  }
+  .swiper-slide img {
+    width: 200px;
+    height: 200px;
   }
 
   .swiper-button-prev {
